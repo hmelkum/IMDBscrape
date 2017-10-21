@@ -1,3 +1,254 @@
 {
-  "articles": []
+  "movies": [
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0111161/?ref_=adv_li_i",
+      "title": "The Shawshank Redemption12345678910X",
+      "rating": "9.3"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0068646/?ref_=adv_li_i",
+      "title": "The Godfather12345678910X",
+      "rating": "9.2"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0468569/?ref_=adv_li_i",
+      "title": "The Dark Knight12345678910X",
+      "rating": "9"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0071562/?ref_=adv_li_i",
+      "title": "The Godfather: Part II12345678910X",
+      "rating": "9"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0110912/?ref_=adv_li_i",
+      "title": "Pulp Fiction12345678910X",
+      "rating": "8.9"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0108052/?ref_=adv_li_i",
+      "title": "Schindler's List12345678910X",
+      "rating": "8.9"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0050083/?ref_=adv_li_i",
+      "title": "12 Angry Men12345678910X",
+      "rating": "8.9"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0167260/?ref_=adv_li_i",
+      "title": "The Lord of the Rings: The Return of the King12345678910X",
+      "rating": "8.9"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0060196/?ref_=adv_li_i",
+      "title": "Il buono, il brutto, il cattivo12345678910X",
+      "rating": "8.9"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt1375666/?ref_=adv_li_i",
+      "title": "Inception12345678910X",
+      "rating": "8.8"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0109830/?ref_=adv_li_i",
+      "title": "Forrest Gump12345678910X",
+      "rating": "8.8"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0137523/?ref_=adv_li_i",
+      "title": "Fight Club12345678910X",
+      "rating": "8.8"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0120737/?ref_=adv_li_i",
+      "title": "The Lord of the Rings: The Fellowship of the Ring12345678910X",
+      "rating": "8.8"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0080684/?ref_=adv_li_i",
+      "title": "Star Wars: Episode V - The Empire Strikes Back12345678910X",
+      "rating": "8.8"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0076759/?ref_=adv_li_i",
+      "title": "Star Wars12345678910X",
+      "rating": "8.7"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0099685/?ref_=adv_li_i",
+      "title": "Goodfellas12345678910X",
+      "rating": "8.7"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0133093/?ref_=adv_li_i",
+      "title": "The Matrix12345678910X",
+      "rating": "8.7"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0317248/?ref_=adv_li_i",
+      "title": "Cidade de Deus12345678910X",
+      "rating": "8.7"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0073486/?ref_=adv_li_i",
+      "title": "One Flew Over the Cuckoo's Nest12345678910X",
+      "rating": "8.7"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0167261/?ref_=adv_li_i",
+      "title": "The Lord of the Rings: The Two Towers12345678910X",
+      "rating": "8.7"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0047478/?ref_=adv_li_i",
+      "title": "Shichinin no samurai12345678910X",
+      "rating": "8.7"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0816692/?ref_=adv_li_i",
+      "title": "Interstellar12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0102926/?ref_=adv_li_i",
+      "title": "The Silence of the Lambs12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0114369/?ref_=adv_li_i",
+      "title": "Se7en12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0110413/?ref_=adv_li_i",
+      "title": "Léon12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0120815/?ref_=adv_li_i",
+      "title": "Saving Private Ryan12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0114814/?ref_=adv_li_i",
+      "title": "The Usual Suspects12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0245429/?ref_=adv_li_i",
+      "title": "Sen to Chihiro no kamikakushi12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0118799/?ref_=adv_li_i",
+      "title": "La vita è bella12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt1675434/?ref_=adv_li_i",
+      "title": "The Intouchables12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0038650/?ref_=adv_li_i",
+      "title": "It's a Wonderful Life12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0064116/?ref_=adv_li_i",
+      "title": "Once Upon a Time in the West12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt5074352/?ref_=adv_li_i",
+      "title": "Dangal12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0021749/?ref_=adv_li_i",
+      "title": "City Lights12345678910X",
+      "rating": "8.6"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt1856101/?ref_=adv_li_i",
+      "title": "Blade Runner 204912345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0407887/?ref_=adv_li_i",
+      "title": "The Departed12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0120689/?ref_=adv_li_i",
+      "title": "The Green Mile12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0078748/?ref_=adv_li_i",
+      "title": "Alien12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0482571/?ref_=adv_li_i",
+      "title": "The Prestige12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0082971/?ref_=adv_li_i",
+      "title": "Raiders of the Lost Ark12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0172495/?ref_=adv_li_i",
+      "title": "Gladiator12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt2582802/?ref_=adv_li_i",
+      "title": "Whiplash12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt5311514/?ref_=adv_li_i",
+      "title": "Kimi no na wa.12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0054215/?ref_=adv_li_i",
+      "title": "Psycho12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0088763/?ref_=adv_li_i",
+      "title": "Back to the Future12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0110357/?ref_=adv_li_i",
+      "title": "The Lion King12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0078788/?ref_=adv_li_i",
+      "title": "Apocalypse Now12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0120586/?ref_=adv_li_i",
+      "title": "American History X12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0209144/?ref_=adv_li_i",
+      "title": "Memento12345678910X",
+      "rating": "8.5"
+    },
+    {
+      "url": "http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=1&ref_=adv_prv/title/tt0103064/?ref_=adv_li_i",
+      "title": "Terminator 2: Judgment Day12345678910X",
+      "rating": "8.5"
+    }
+  ]
 }
