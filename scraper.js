@@ -2,13 +2,16 @@ const request = require('request');
 const scrapeIt = require('scrape-it');
 const jsonfile = require('jsonfile');
 
-
+var page;
 var file = 'data.json'
 var i = 1
-var arr=[];
+var arr=new Array();
+
+
+
 function scraperloop(i) {
     setTimeout(function () {
-        if (i <= 3) {
+        if (i <= 21) {
 
             var options = {
                 url: 'http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=' + i + '&ref_=adv_prv',
@@ -42,21 +45,24 @@ function scraperloop(i) {
                 }
             }
 
-            arr.push(...data.movies);
-
-            request(options, callback)
-            scraperloop(++i)
-        }
-        else {
-            function callback(error, response, body) {
+           function callback(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     page = scrapeIt.scrapeHTML(body, data);
 
-                    jsonfile.writeFile(file, page, { spaces: 2 }, function (err) {
-                        console.error(err || 'success')
-                    });
                 }
             }
+
+            request(options, callback)
+            //arr.push(...data.movies);
+            arr.push(page);
+            console.log(i+" done")
+            scraperloop(++i)
+        }
+        else { 
+             jsonfile.writeFile(file,/* page,*/arr, { spaces: 2 }, function (err) {
+                 console.error(err || 'success')
+             });
+
             return;
         }
 
