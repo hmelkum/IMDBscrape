@@ -2,31 +2,48 @@ google.charts.load('45', { packages: ['corechart', 'table', 'geochart'] });
 
 google.charts.setOnLoadCallback(drawPieChart);
 google.charts.setOnLoadCallback(drawColumnChart);
-google.charts.setOnLoadCallback(drawAreaChart);
-google.charts.setOnLoadCallback(drawGeoChart);
 google.charts.setOnLoadCallback(drawTable);
 
 function drawPieChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Element');
-    data.addColumn('number', 'Percentage');
-    data.addRows([
-        ['Nitrogen', 0.78],
-        ['Oxygen', 0.21],
-        ['Other', 0.01]
-    ]);
+    var g = 0;
+    var l = 0;
+    $.ajax({
+        url: "/data",
+        dataType: "json",
+        success: function (jsonData) {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'title');
+            data.addColumn('number', 'wordsCount');
 
-    var options = {
-        legend: 'left',
-        title: 'Air Composition',
-        is3D: false,
-        width: '100%',
-        height: '100%'
-    };
-    //console.log(data.toJSON());
-    // Instantiate and draw the chart.
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div0'));
-    chart.draw(data, options);
+            for (var i = 0; i < jsonData.length; i++) {
+                if (jsonData[i].rating > 8) {
+                    g++;
+                }
+                else {
+                    l++
+                }
+            }
+            data.addRow([
+                "Rating greater than 8",
+                g
+            ]);
+            data.addRow([
+                "Rating less than 8",
+                l
+            ]);
+
+            var options = {
+                legend: 'left',
+                title: 'Air Composition',
+                is3D: false,
+                width: '100%',
+                height: '100%'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div0'));
+            chart.draw(data, options);
+        }
+    });
 }
 
 function drawColumnChart() {
@@ -47,57 +64,21 @@ function drawColumnChart() {
     chart.draw(data, options);
 }
 
-function drawAreaChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Year', 'Sales', 'Expenses'],
-        ['2013', 1000, 400],
-        ['2014', 1170, 460],
-        ['2015', 660, 1120],
-        ['2016', 1030, 540]
-    ]);
-
-    var options = {
-        title: 'Company Performance',
-        hAxis: { title: 'Year', titleTextStyle: { color: '#333' } },
-        vAxis: { minValue: 0 }
-    };
-
-    var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
-    chart.draw(data, options);
-}
-
-function drawGeoChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Country', 'Popularity'],
-        ['Germany', 200],
-        ['United States', 300],
-        ['Brazil', 400],
-        ['Canada', 500],
-        ['France', 600],
-        ['RU', 700]
-    ]);
-
-    var chart = new google.visualization.GeoChart(document.getElementById('region_map_div'));
-    chart.draw(data, null);
-}
-
 function drawTable() {
     $.ajax({
-        url: "/wiki",
+        url: "/data",
         dataType: "json",
         success: function (jsonData) {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'title');
+            data.addColumn('string', 'linksCount');
             data.addColumn('number', 'wordsCount');
-            data.addColumn('number', 'linksCount');
-            data.addColumn('number', 'imagesCount');
 
             for (var i = 0; i < jsonData.length; i++) {
                 data.addRow([
                     jsonData[i].title,
-                    jsonData[i].wordsCount,
-                    jsonData[i].linksCount,
-                    jsonData[i].imagesCount,
+                    jsonData[i].date,
+                    parseFloat(jsonData[i].rating),
                 ]);
             }
 
@@ -110,7 +91,7 @@ function drawTable() {
 
             var table = new google.visualization.Table(document.getElementById('barformat_div'));
             var formatter = new google.visualization.BarFormat({ width: 100 });
-            formatter.format(data, 3); // Apply formatter to 3rd column
+            //formatter.format(data, 3); // Apply formatter to 3rd column
             table.draw(data, options);
         }
     });
@@ -119,7 +100,5 @@ function drawTable() {
 $(window).resize(function () {
     drawPieChart();
     drawColumnChart();
-    drawAreaChart();
-    drawRegionsMap();
     drawTable();
 });

@@ -10,7 +10,7 @@ var arr = [];
 
 function scraperloop(i) {
     setTimeout(function () {
-        if (i < 2) {
+        if (i < 21) {
 
             var options = {
                 url: 'http://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple&page=' + i + '&ref_=adv_prv',
