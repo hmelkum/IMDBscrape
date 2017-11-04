@@ -39,11 +39,7 @@ function scraperloop(i) {
                         },
                         date: {
                             selector: "span.lister-item-year"
-                        }/*,
-                        actors: {
-                            selector: "span",
-                            attr: "title"
-                        }*/
+                        }
                     }
                 }
             }
@@ -63,6 +59,11 @@ function scraperloop(i) {
             scraperloop(++i)
         }
         else {
+            for(var k = 0; k < arr.length; k++) {  
+                arr[k].date = arr[k].date.replace('(', '');
+                arr[k].date = arr[k].date.replace(')', '');
+                arr[k].title = arr[k].title.replace('12345678910X', '');
+            }
             jsonfile.writeFile(file,arr, { spaces: 2 }, function (err) {
                 console.error(err || 'success')
             });

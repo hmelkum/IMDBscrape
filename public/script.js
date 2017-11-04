@@ -1,4 +1,4 @@
-google.charts.load('45', { packages: ['corechart', 'table', 'geochart'] });
+google.charts.load('45', { packages: ['corechart', 'table'] });
 
 google.charts.setOnLoadCallback(drawPieChart);
 google.charts.setOnLoadCallback(drawColumnChart);
@@ -34,7 +34,7 @@ function drawPieChart() {
 
             var options = {
                 legend: 'left',
-                title: 'Air Composition',
+                title: 'Rating Ratios',
                 is3D: false,
                 width: '100%',
                 height: '100%'
@@ -47,21 +47,61 @@ function drawPieChart() {
 }
 
 function drawColumnChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Year', 'Sales', 'Expenses'],
-        ['2004', 1000, 400],
-        ['2005', 1170, 460],
-        ['2006', 660, 1120],
-        ['2007', 1030, 540]
-    ]);
 
-    var options = {
-        title: 'Company Performance',
-        hAxis: { title: 'Year', titleTextStyle: { color: 'red' } }
-    };
+    var arryear = [];
+    var arrRatingAv = [];
 
-    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
-    chart.draw(data, options);
+    $.ajax({
+        url: "/data",
+        dataType: "json",
+        success: function (jsonData) {
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'year');
+            data.addColumn('number', 'rating');
+
+            for (var i = 0; i < jsonData.length; i++) {
+                arryear.push(parseFloat(jsonData[i].date));
+            }
+
+            arryear.sort(function (a, b) { return a - b });
+            for (var j = 0; j < arryear.length; j++) {
+                for (var i = 0; i < arryear.length - 1; i++) {
+                    if (arryear[i] == arryear[i + 1]) {
+                        arryear.splice(i + 1, 1);
+                        i = i - 2;
+                    }
+                }
+            }
+            for (var i = 0; i < arryear.length; i++) {
+                var n = 0;
+                var s = 0;
+                for (var j = 0; j < jsonData.length; j++) {
+                    if (arryear[i] == jsonData[j].date) {
+                        s = s + parseFloat(jsonData[j].rating);
+                        n++;
+                        //arrRatingAv.push(parseFloat(jsonData[i].rating));
+                    }
+
+                }
+                if (n == 0) { n = 1 }
+                var av = s / n;
+                arrRatingAv.push(av);
+            }
+
+            console.log(arryear);
+            console.log(arrRatingAv);
+            for (var i = 0; i < arryear.length; i++) {
+                data.addRow([arryear[i], arrRatingAv[i]]);
+             }
+            var options = {
+                title: 'Average rating - Year',
+                hAxis: { title: 'Year', titleTextStyle: { color: 'red' } }
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
+            chart.draw(data, options);
+        }
+    });
 }
 
 function drawTable() {
@@ -71,8 +111,8 @@ function drawTable() {
         success: function (jsonData) {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'title');
-            data.addColumn('string', 'linksCount');
-            data.addColumn('number', 'wordsCount');
+            data.addColumn('string', 'year');
+            data.addColumn('number', 'rating');
 
             for (var i = 0; i < jsonData.length; i++) {
                 data.addRow([
@@ -102,3 +142,4 @@ $(window).resize(function () {
     drawColumnChart();
     drawTable();
 });
+
